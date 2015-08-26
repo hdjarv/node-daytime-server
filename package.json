@@ -1,0 +1,11 @@
+{
+  "name": "node-daytime-server",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "dependencies": {
+    "moment": "^2.10.6"
+  }
+}
