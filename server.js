@@ -6,9 +6,10 @@ var net = require('net');
 var moment = require('moment');
 
 var port = process.env.PORT || 13;
+var momentFunc = process.env.UTC ? moment.utc : moment;
 
 var server = net.createServer(function (socket) {
-  socket.end(moment().format(process.env.FORMAT || 'YYYY-MM-DD HH:mm:ss Z') + '\n');
+  socket.end(momentFunc().format(process.env.FORMAT || 'YYYY-MM-DD HH:mm:ss Z') + '\n');
 });
 
 server.on('error', function (error) {

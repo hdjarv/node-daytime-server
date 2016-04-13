@@ -24,7 +24,7 @@ Use this command (in the `node-daytime-server` folder) to run this software.
 npm start
 ```
 
-By default, the server uses port `13`. That usually requires administrative privileges for the user to use. 
+By default, the server uses port `13`. That usually requires administrative privileges for the user to use.
 To change port set the `PORT` environment variable when starting the server.
 
 ```sh
@@ -37,6 +37,12 @@ The server's output format is customizable by settings the `FORMAT` environment 
 FORMAT="DD/MM/YYYY" npm start
 ```
 
+The server uses your local time zone. By setting the `UTC` environment variable (to any value at all) makes it
+return time in UTC instead.
+
+```sh
+UTC=1 npm start
+```
 
 ## Using
 
